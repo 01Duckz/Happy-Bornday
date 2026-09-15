@@ -41,7 +41,7 @@ I loveeee loveeeee loveeee youuuu sooooooo mucchhhhh me lalaaaaabssss!! (づ ̄ 
 like really🥺💖
   
 
-  ∧,,,∧
+    ∧,,,∧
 (  ̳• · • ̳)
 /    づ♡ I love you
 
