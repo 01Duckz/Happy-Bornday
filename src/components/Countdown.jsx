@@ -4,7 +4,6 @@ export default function Countdown({ timeLeft, onUnlock }) {
   const [pin, setPin] = useState('');
   const [pinError, setPinError] = useState(false);
 
-  // Format single digit numbers with leading zeroes (e.g. 05)
   const formatNum = (num) => String(num).padStart(2, '0');
 
   const handlePinSubmit = (e) => {
@@ -13,21 +12,20 @@ export default function Countdown({ timeLeft, onUnlock }) {
       setPinError(false);
       setPin('');
       
-      // Close Bootstrap Modal
       const modalElement = document.getElementById('pinModal');
       const modalInstance = window.bootstrap?.Modal.getInstance(modalElement);
       if (modalInstance) {
         modalInstance.hide();
       }
 
-      onUnlock(); // Permanently unlocks the section for this session
+      onUnlock();
     } else {
       setPinError(true);
     }
   };
 
   return (
-    <div className="my-auto w-100 text-center">
+    <div className="my-auto w-100 text-center pb-4">
       
       {/* Days Remaining Badge */}
       <div className="mb-4">
@@ -48,7 +46,7 @@ export default function Countdown({ timeLeft, onUnlock }) {
         </div>
       </div>
 
-      {/* Unlock Icon - Fixed to the absolute bottom-right corner */}
+      {/* Unlock Icon - Bottom Right */}
       <button 
         type="button"
         className="btn btn-link text-light text-opacity-50 p-3 position-absolute bottom-0 end-0 z-3 text-decoration-none"
@@ -59,7 +57,7 @@ export default function Countdown({ timeLeft, onUnlock }) {
         <i className="bi bi-lock-fill fs-5"></i>
       </button>
 
-      {/* PIN Authentication Modal */}
+      {/* Modal */}
       <div className="modal fade" id="pinModal" tabIndex="-1" aria-labelledby="pinModalLabel" aria-hidden="true">
         <div className="modal-dialog modal-dialog-centered px-3">
           <div className="modal-content text-white rounded-4 shadow-2xl border border-slate-700" style={{ backgroundColor: '#0f172a' }}>

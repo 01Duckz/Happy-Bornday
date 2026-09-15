@@ -151,7 +151,8 @@ export default function App() {
 
       {/* SECTION 1: Countdown or Cake View */}
       <div className="snap-screen">
-        <div className="text-center mt-3 z-1">
+        {/* Added pt-5 mt-4 so header sits clear of iPhone notch */}
+        <div className="text-center pt-5 mt-4 z-1">
           <h1 className="h4 fw-bold text-uppercase text-warning mb-1">
             {showCakeSection ? "HAPPY BIRTHDAY!" : "THE COUNTDOWN"}
           </h1>
@@ -181,7 +182,7 @@ export default function App() {
           />
         )}
 
-        {/* Scroll Prompt (Appears after 5 seconds of blowing candle) */}
+        {/* Scroll Prompt */}
         <div className={`transition-opacity mb-2 text-center z-1 ${showScrollPrompt ? 'opacity-100' : 'opacity-0'}`}>
           <small className="text-light d-block mb-1 opacity-75">Scroll down for a message</small>
           <div className="text-warning h5 mb-0">↓</div>
